@@ -1,0 +1,17 @@
+<footer
+  [ngClass]="{
+    'bg-secondary': true,
+    'text-white': true,
+    'text-center': true,
+    'py-3': true,
+    'mt-auto': true,
+    'highlighted-footer': isHighlighted
+  }"
+  [ngStyle]="footerStyles"
+  (mouseenter)="toggleHighlight()"
+  (mouseleave)="toggleHighlight()"
+>
+  <div class="container">
+    <p class="mb-0">&copy; {{currentYear}} Proyecto desarrollado por estudiantes de la Universidad Autónoma de Aguascalientes</p>
+  </div>
+</footer>

@@ -1,0 +1,40 @@
+<h1 class="titulo">Desarrolladores de este proyecto</h1>
+
+<div class="busqueda-container">
+  <input 
+    type="text" 
+    [(ngModel)]="busqueda" 
+    placeholder="Buscar desarrollador..."
+    class="input-busqueda"
+  />
+</div>
+
+<div class="lista-desarrolladores">
+  @for (dev of desarrolladoresFiltrados(); track dev) {
+    <div class="tarjeta-dev">
+      <p class="nombre">{{ dev.nombre }}</p>
+      <p class="id">ID: {{ dev.id || 'Sin asignar' }}</p>
+    </div>
+  }
+
+  <!-- Mensaje cuando no hay coincidencias -->
+  @if (desarrolladoresFiltrados().length === 0) {
+    <p class="mensaje-no-encontrado">No se encontró ningún desarrollador con ese nombre.</p>
+  }
+</div>
+
+<!-- Espacio para las imágenes -->
+<div class="imagenes-container">
+  <div class="imagen">
+    <img src="./tadeo.jpg" alt="Imagen 1" />
+    <p>Tadeo</p>
+  </div>
+  <div class="imagen">
+    <img src="./fabiola.jpg" alt="Imagen 1" />
+    <p>Fabiola</p>
+  </div>
+  <div class="imagen">
+    <img src="./reyli.jpg" alt="Imagen 1" />
+    <p>Reyli</p>
+  </div>
+</div>
